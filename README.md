@@ -1,4 +1,4 @@
-# Portfolio Website
+# Sarika Kenche Portfolio
 
 This is a responsive personal portfolio website built with plain HTML, CSS, and JavaScript.
 
