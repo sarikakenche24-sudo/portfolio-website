@@ -1,0 +1,211 @@
+:root {
+  color-scheme: dark;
+  --bg: #07111f;
+  --panel: rgba(8, 21, 37, 0.82);
+  --line: rgba(148, 163, 184, 0.15);
+  --text: #edf4ff;
+  --muted: #bfcbeb;
+  --primary: #7c9cff;
+  --accent: #20d3c2;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  color: var(--text);
+  background:
+    radial-gradient(circle at top, #10233d 0, #07111f 38%, #040b14 100%);
+  min-height: 100vh;
+}
+
+a { text-decoration: none; color: inherit; }
+
+.container {
+  width: min(1120px, calc(100% - 2rem));
+  margin: 0 auto;
+}
+
+.hero-shell {
+  min-height: 100vh;
+  border-bottom: 1px solid var(--line);
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 0;
+  position: sticky;
+  top: 0;
+  backdrop-filter: blur(12px);
+  z-index: 10;
+}
+
+.brand {
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.nav-links {
+  display: flex;
+  gap: 1rem;
+}
+
+.nav-links a {
+  color: var(--muted);
+  font-weight: 600;
+}
+
+.menu-toggle {
+  display: none;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  color: var(--text);
+  border-radius: 10px;
+  padding: 0.45rem 0.6rem;
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 2rem;
+  align-items: center;
+  padding: 3rem 0 5rem;
+}
+
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  font-size: 0.9rem;
+  color: var(--accent);
+}
+
+h1 {
+  font-size: clamp(2.8rem, 8vw, 4.7rem);
+  line-height: 1.02;
+  margin: 0.4rem 0 1rem;
+}
+
+.lead, .panel p, .card p {
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+.cta-row {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.btn {
+  border-radius: 999px;
+  padding: 0.85rem 1.15rem;
+  font-weight: 700;
+  border: 1px solid transparent;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, var(--primary), #95a9ff);
+  color: #04101d;
+}
+
+.btn-secondary {
+  border-color: var(--line);
+  background: rgba(7, 17, 31, 0.65);
+}
+
+.quick-stats {
+  display: flex;
+  gap: 1rem;
+  list-style: none;
+  padding: 0;
+  margin: 1.5rem 0 0;
+}
+
+.quick-stats li {
+  flex: 1;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  padding: 0.9rem;
+}
+
+.quick-stats strong { display: block; font-size: 1.3rem; }
+.quick-stats span { color: var(--muted); font-size: 0.95rem; }
+
+.hero-card, .panel, .card {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 24px;
+  box-shadow: 0 18px 40px rgba(15, 23, 42, 0.35);
+}
+
+.hero-card {
+  padding: 1.1rem;
+}
+
+.avatar {
+  width: 72px; height: 72px; border-radius: 18px;
+  display: grid; place-items: center; font-weight: 800; font-size: 1.3rem;
+  background: linear-gradient(135deg, var(--accent), var(--primary));
+  color: #06101d;
+}
+
+.hero-card h2 { margin-bottom: 0.25rem; }
+.hero-card p, .hero-card li { color: var(--muted); }
+
+.stack { display: grid; gap: 1rem; padding-bottom: 3rem; }
+.panel { padding: 1rem; }
+.panel h2 { margin-top: 0; }
+
+.chip-grid {
+  display: flex; flex-wrap: wrap; gap: 0.75rem;
+}
+
+.chip-grid span {
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 0.55rem 0.8rem;
+  background: rgba(124, 156, 255, 0.08);
+  color: #eaf1ff;
+}
+
+.card-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
+.card { padding: 1rem; }
+.card h3 { margin-top: 0; }
+
+.two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+.list { color: var(--muted); line-height: 1.6; }
+
+.footer {
+  padding: 0 0 2rem;
+  color: var(--muted);
+  text-align: center;
+}
+
+@media (max-width: 920px) {
+  .hero { grid-template-columns: 1fr; }
+  .card-grid, .two-col { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 720px) {
+  .menu-toggle { display: inline-grid; }
+  .nav-links {
+    display: none;
+    position: absolute;
+    right: 1rem;
+    top: 3.3rem;
+    flex-direction: column;
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    padding: 0.8rem;
+    min-width: 180px;
+  }
+  .nav-links.open { display: flex; }
+  .quick-stats { flex-direction: column; }
+  .cta-row { flex-direction: column; }
+}

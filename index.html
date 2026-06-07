@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Alex Morgan | Portfolio</title>
+    <meta
+      name="description"
+      content="A modern, responsive portfolio website showcasing skills, projects, education, certifications, and contact details."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="hero-shell">
+      <nav class="nav container">
+        <a class="brand" href="#top">Alex Morgan</a>
+        <button class="menu-toggle" aria-label="Toggle navigation">☰</button>
+        <div class="nav-links">
+          <a href="#about">About</a>
+          <a href="#skills">Skills</a>
+          <a href="#projects">Projects</a>
+          <a href="#education">Education</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </nav>
+
+      <section class="hero container" id="top">
+        <div class="hero-copy">
+          <p class="eyebrow">Aspiring Software Engineer</p>
+          <h1>Building practical tech solutions with curiosity, discipline, and design.</h1>
+          <p class="lead">
+            I am a motivated intern passionate about web development, cloud computing, and
+            creating user-centered digital experiences.
+          </p>
+          <div class="cta-row">
+            <a class="btn btn-primary" href="#projects">View Projects</a>
+            <a class="btn btn-secondary" href="#contact">Get in Touch</a>
+          </div>
+          <ul class="quick-stats">
+            <li><strong>3+</strong><span>Years learning</span></li>
+            <li><strong>8</strong><span>Projects built</span></li>
+            <li><strong>2</strong><span>Certifications</span></li>
+          </ul>
+        </div>
+        <aside class="hero-card">
+          <div class="avatar">AM</div>
+          <h2>Profile Snapshot</h2>
+          <p>Frontend • Backend • Cloud • Problem Solving</p>
+          <ul>
+            <li>Responsive UI development</li>
+            <li>API integration and debugging</li>
+            <li>Team collaboration and mentorship</li>
+          </ul>
+        </aside>
+      </section>
+    </header>
+
+    <main class="container stack">
+      <section id="about" class="panel">
+        <h2>About Me</h2>
+        <p>
+          I am an enthusiastic intern with a strong interest in creating accessible websites,
+          writing clean code, and learning modern engineering practices. My goal is to grow as a
+          software developer by contributing to real-world projects and continuously improving
+          my technical and communication skills.
+        </p>
+      </section>
+
+      <section id="skills" class="panel">
+        <h2>Technical Skills</h2>
+        <div class="chip-grid">
+          <span>HTML5</span>
+          <span>CSS3</span>
+          <span>JavaScript</span>
+          <span>React</span>
+          <span>Node.js</span>
+          <span>Git & GitHub</span>
+          <span>Responsive Design</span>
+          <span>Cloud Basics</span>
+          <span>Problem Solving</span>
+        </div>
+      </section>
+
+      <section id="projects" class="panel">
+        <h2>Featured Projects</h2>
+        <div class="card-grid">
+          <article class="card">
+            <h3>Interactive Dashboard</h3>
+            <p>Built a responsive analytics dashboard using React and chart libraries to present key insights.</p>
+          </article>
+          <article class="card">
+            <h3>Portfolio Website</h3>
+            <p>Designed and deployed a polished personal site focused on readability, storytelling, and performance.</p>
+          </article>
+          <article class="card">
+            <h3>Task Automation Tool</h3>
+            <p>Created a lightweight command-line utility to streamline repetitive admin tasks and improve productivity.</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="education" class="panel">
+        <h2>Education & Certifications</h2>
+        <div class="two-col">
+          <article>
+            <h3>Education</h3>
+            <p><strong>Bachelor of Science in Computer Science</strong><br />University of Technology</p>
+            <p>Expected graduation: 2027</p>
+          </article>
+          <article>
+            <h3>Certifications</h3>
+            <ul class="list">
+              <li>Google UX Design Certificate</li>
+              <li>Microsoft Azure Fundamentals</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section id="contact" class="panel contact-panel">
+        <h2>Contact</h2>
+        <p>Email: alex.morgan@example.com</p>
+        <p>LinkedIn: linkedin.com/in/alexmorgan</p>
+        <p>GitHub: github.com/alexmorgan</p>
+      </section>
+    </main>
+
+    <footer class="footer container">
+      <p>© <span id="year"></span> Alex Morgan. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
